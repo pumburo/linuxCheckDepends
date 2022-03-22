@@ -25,7 +25,7 @@ done
 echo "Missing packages;"
 echo ${missing}
 
-if [${autoInstall,,} -eq "y"]; then
+if [[ ${autoInstall,,} == "y" ]]; then
     [ -z $missing ] && exit 0 || installMissing
 fi
 
